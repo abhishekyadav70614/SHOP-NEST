@@ -1,0 +1,60 @@
+:root{--bg:#f3f6f5;--card:#fff;--ink:#12302e;--mute:#5c7471;--line:#d9e3e1;--brand:#0f6b63;--brand2:#0b514b;--gold:#f2b134;--err:#b3261e}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+button,input,select{font:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.bar{max-width:1100px;margin:auto;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.logo{font-size:1.4rem;font-weight:800;letter-spacing:.5px;cursor:pointer}
+.logo span{color:var(--gold)}
+.search{flex:1;min-width:180px;padding:10px 14px;border-radius:8px;border:0}
+.btn{background:var(--gold);color:var(--ink);border:0;padding:9px 16px;border-radius:8px;font-weight:700}
+.btn.ghost{background:transparent;color:#fff;border:1px solid #ffffff55}
+.btn.main{background:var(--brand);color:#fff;width:100%;padding:12px}
+.btn.main:hover{background:var(--brand2)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+main{max-width:1100px;margin:auto;padding:20px 16px 60px}
+.hero{background:var(--brand);color:#fff;border-radius:14px;padding:28px;margin-bottom:20px}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);max-width:18ch}
+.hero p{margin-top:8px;opacity:.9}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+.chip{border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:99px}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+select{padding:7px 10px;border-radius:8px;border:1px solid var(--line);margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:130px;display:grid;place-items:center;font-size:3.4rem}
+.info{padding:12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.info h3{font-size:1rem}
+.cat{color:var(--mute);font-size:.85rem}
+.price{font-weight:800;font-size:1.1rem;margin-top:auto}
+.info .btn{margin-top:8px;background:var(--brand);color:#fff}
+.empty{padding:40px;text-align:center;color:var(--mute)}
+.panel{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:#fff;z-index:40;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;box-shadow:-8px 0 30px #0003}
+.panel.open{transform:none}
+.panel h2{padding:16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.pbody{flex:1;overflow:auto;padding:12px 16px}
+.pfoot{padding:16px;border-top:1px solid var(--line)}
+.row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.row .em{font-size:1.8rem}
+.row .n{flex:1}
+.qty button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:#fff}
+.x{background:none;border:0;font-size:1.3rem}
+.total{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin-bottom:12px}
+.shade{position:fixed;inset:0;background:#0006;z-index:30;display:none}
+.shade.on{display:block}
+.modal{position:fixed;inset:0;display:none;place-items:center;z-index:50;padding:16px}
+.modal.on{display:grid}
+.box{background:#fff;border-radius:14px;padding:24px;width:min(380px,100%)}
+.box h2{margin-bottom:12px}
+.box label{display:block;font-size:.9rem;margin:10px 0 4px}
+.box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px}
+.err{color:var(--err);font-size:.9rem;min-height:1.2em;margin:8px 0}
+.link{background:none;border:0;color:var(--brand);text-decoration:underline;margin-top:12px}
+.order{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+.order small{color:var(--mute)}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:8px;z-index:60;transition:transform .25s}
+#toast.on{transform:translateX(-50%)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.hello{font-size:.95rem}

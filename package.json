@@ -1,0 +1,19 @@
+{
+  "name": "bazaar-mern",
+  "version": "1.0.0",
+  "description": "MERN e-commerce app: MongoDB, Express, React, Node",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "build": "npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.0"
+  }
+}
