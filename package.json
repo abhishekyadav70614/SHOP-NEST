@@ -1,5 +1,5 @@
 {
-  "name": "bazaar-mern",
+  "name": "ShopNest-mern",
   "version": "1.0.0",
   "description": "MERN e-commerce app: MongoDB, Express, React, Node",
   "main": "server/server.js",

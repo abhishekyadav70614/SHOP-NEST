@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useApp } from "/context/AppContext.jsx";
+﻿import { useState } from "react";
+import { useApp } from "../context/AppContext.jsx";
 
 export default function AuthModal({ mode, setMode, onClose }) {
   const { authenticate } = useApp();

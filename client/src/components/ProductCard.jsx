@@ -1,4 +1,4 @@
-import { useApp } from "/context/AppContext.jsx";
+﻿import { useApp } from "../context/AppContext.jsx";
 import { inr } from "../api.js";
 
 export default function ProductCard({ product }) {

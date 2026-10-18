@@ -28,5 +28,5 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5000;
 connectDB()
   .then(seedProducts)
-  .then(() => app.listen(PORT, () => console.log(`Bazaar running on http://localhost:${PORT}`)))
+  .then(() => app.listen(PORT, () => console.log(`ShopNest running on http://localhost:${PORT}`)))
   .catch(err => { console.error("Startup failed:", err.message); process.exit(1); });

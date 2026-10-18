@@ -1,4 +1,4 @@
-import { useApp } from "/context/AppContext.jsx";
+﻿import { useApp } from "../context/AppContext.jsx";
 import { inr } from "../api.js";
 
 export default function CartDrawer({ open, onClose, onNeedLogin, onOrdered }) {
@@ -13,7 +13,7 @@ export default function CartDrawer({ open, onClose, onNeedLogin, onOrdered }) {
     <>
       <div className={"shade " + (open ? "on" : "")} onClick={onClose} />
       <aside className={"panel " + (open ? "open" : "")} aria-label="Shopping cart">
-        <h2>Your cart <button className="x" onClick={onClose} aria-label="Close cart">×</button></h2>
+        <h2>Your cart <button className="x" onClick={onClose} aria-label="Close cart">Ã—</button></h2>
         <div className="pbody">
           {cart.length === 0 && <div className="empty">Your cart is empty.</div>}
           {cart.map(i => (
@@ -21,10 +21,10 @@ export default function CartDrawer({ open, onClose, onNeedLogin, onOrdered }) {
               <span className="em">{i.emoji}</span>
               <div className="n"><b>{i.name}</b><br />{inr(i.price)}</div>
               <div className="qty">
-                <button onClick={() => changeQty(i._id, -1)} aria-label="Decrease">−</button> {i.qty}{" "}
+                <button onClick={() => changeQty(i._id, -1)} aria-label="Decrease">âˆ’</button> {i.qty}{" "}
                 <button onClick={() => changeQty(i._id, 1)} aria-label="Increase">+</button>
               </div>
-              <button className="x" onClick={() => removeItem(i._id)} aria-label="Remove">×</button>
+              <button className="x" onClick={() => removeItem(i._id)} aria-label="Remove">Ã—</button>
             </div>
           ))}
         </div>
@@ -36,3 +36,4 @@ export default function CartDrawer({ open, onClose, onNeedLogin, onOrdered }) {
     </>
   );
 }
+

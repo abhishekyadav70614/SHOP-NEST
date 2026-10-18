@@ -1,7 +1,7 @@
-
+﻿
 import { useEffect, useState } from "react";
 import { api } from "../api.js";
-import ProductCard from "/components/ProductCard.jsx";
+import ProductCard from "../components/ProductCard.jsx";
 
 export default function Home({ search }) {
   const [products, setProducts] = useState([]);
@@ -26,7 +26,7 @@ export default function Home({ search }) {
     <>
       <div className="hero">
         <h1>Everyday essentials, delivered to your door</h1>
-        <p>Free delivery on orders above ₹999.</p>
+        <p>Free delivery on orders above â‚¹999.</p>
       </div>
       <div className="tools">
         {categories.map(c => (

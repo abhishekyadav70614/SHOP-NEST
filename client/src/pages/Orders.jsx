@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useApp } from "/context/AppContext.jsx";
+﻿import { useEffect, useState } from "react";
+import { useApp } from "../context/AppContext.jsx";
 import { inr } from "../api.js";
 
 export default function Orders() {
@@ -18,7 +18,7 @@ export default function Orders() {
       {orders.map(o => (
         <div className="order" key={o._id}>
           <b>Order #{o._id.slice(-6).toUpperCase()}</b> <small>{new Date(o.createdAt).toLocaleString()}</small><br />
-          {o.items.map(i => <div key={i._id}>{i.emoji} {i.name} × {i.qty}</div>)}
+          {o.items.map(i => <div key={i._id}>{i.emoji} {i.name} Ã— {i.qty}</div>)}
           <b>Total: {inr(o.total)}</b>
         </div>
       ))}
