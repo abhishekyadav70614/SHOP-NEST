@@ -58,3 +58,9 @@ select{padding:7px 10px;border-radius:8px;border:1px solid var(--line);margin-le
 #toast.on{transform:translateX(-50%)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 .hello{font-size:.95rem}
+
+
+.authpage{min-height:100vh;display:grid;place-items:center;padding:16px;background:linear-gradient(160deg,var(--ink),var(--brand))}
+.authpage .box{box-shadow:0 20px 60px #0004}
+.authpage h1{font-size:1.8rem;margin-bottom:4px}
+.authpage .sub{color:var(--mute);margin-bottom:8px}

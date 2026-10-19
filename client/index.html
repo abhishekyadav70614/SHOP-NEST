@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      function showErr(m) {
+        document.body.insertAdjacentHTML("beforeend",
+          "<pre style='color:red;padding:16px;white-space:pre-wrap'>ERROR: " + m + "</pre>");
+      }
+      window.addEventListener("error", function (e) { showErr(e.message + " (" + (e.filename || "") + ":" + e.lineno + ")"); });
+      window.addEventListener("unhandledrejection", function (e) { showErr(String(e.reason)); });
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-

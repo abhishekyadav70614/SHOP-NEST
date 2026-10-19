@@ -1,16 +1,16 @@
-﻿
-import { useEffect, useState } from "react";
-import { api } from "../api.js";
+﻿import { useEffect, useState } from "react";
+import { useApp } from "../context/AppContext.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 
 export default function Home({ search }) {
+  const { request } = useApp();
   const [products, setProducts] = useState([]);
   const [status, setStatus] = useState("loading");
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("none");
 
   useEffect(() => {
-    api("/products").then(p => { setProducts(p); setStatus("ok"); }).catch(() => setStatus("error"));
+    request("/products").then(p => { setProducts(p); setStatus("ok"); }).catch(() => setStatus("error"));
   }, []);
 
   if (status === "loading") return <div className="empty">Loading products...</div>;
@@ -26,7 +26,7 @@ export default function Home({ search }) {
     <>
       <div className="hero">
         <h1>Everyday essentials, delivered to your door</h1>
-        <p>Free delivery on orders above â‚¹999.</p>
+        <p>Free delivery on orders above ₹999.</p>
       </div>
       <div className="tools">
         {categories.map(c => (
