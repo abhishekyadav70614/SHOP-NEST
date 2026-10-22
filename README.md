@@ -2,7 +2,7 @@
 
 A full-stack online store built with the **MERN stack** (MongoDB, Express, React, Node.js). Users must **sign up or log in first**, and only then can they browse products, add them to the cart, place orders and view their order history.
 
-**Live demo:** _add your Render link here after deployment_
+**Live demo:** https://shop-nest-jrt3.onrender.com
 
 ## Features
 - Login-first access: the shop, cart and orders are hidden until the user logs in
